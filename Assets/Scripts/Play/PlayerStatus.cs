@@ -20,4 +20,8 @@ public class PlayerStatus : MonoBehaviour
     {
 
     }
+    public void GetCoin(int count)
+    {
+        coin += count;
+    }
 }

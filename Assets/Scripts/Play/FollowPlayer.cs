@@ -10,7 +10,6 @@ public class FollowPlayer : MonoBehaviour
 {
     private Transform player;
     private Vector3 offsetPosition;//偏移
-    private bool isRotating = false;
 
     public float distance = 0;
     public float scrollSpeed = 10;
