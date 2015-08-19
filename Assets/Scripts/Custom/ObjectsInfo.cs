@@ -37,9 +37,9 @@ public class ObjectsInfo : MonoBehaviour
             {
                 info.hp = int.Parse(propArr[4]);
                 info.mp = int.Parse(propArr[5]);
+                info.sellPrice = int.Parse(propArr[6]);
+                info.buyPrice = int.Parse(propArr[7]);
             }
-            info.sellPrice = int.Parse(propArr[6]);
-            info.buyPrice = int.Parse(propArr[7]);
 
             objects[id] = info;
         }

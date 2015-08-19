@@ -24,15 +24,13 @@ public class BarNpc : Npc
         playerStatus = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<PlayerStatus>();
     }
 
-    void OnMouseOver()//移动之上 会每帧调用
+    protected override void OnNpcClick()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            //点击
-            ShowQuest();
-        }
+        base.OnNpcClick();
+        ShowQuest();
     }
-   void ShowQuest()
+    
+    void ShowQuest()
     {
         if(isInTask)
         {

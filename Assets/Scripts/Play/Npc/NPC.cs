@@ -10,10 +10,27 @@ public class Npc : MonoBehaviour
 {
     void OnMouseEnter()
     {
-        CursorManager.instance.SetNpcTalk();
+        if(UICamera.hoveredObject == null)
+            CursorManager.instance.SetNpcTalk();
     }
     void OnMouseExit()
     {
-        CursorManager.instance.SetNormal();
+        if(UICamera.hoveredObject == null)
+            CursorManager.instance.SetNormal();
+    }
+    void OnMouseOver()//移动之上 会每帧调用
+    {
+        if(UICamera.hoveredObject == null)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                //点击
+                OnNpcClick();
+            }
+        }
+    }
+    protected virtual void OnNpcClick()
+    {
+
     }
 }

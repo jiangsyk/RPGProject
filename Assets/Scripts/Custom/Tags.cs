@@ -10,4 +10,6 @@ public class Tags
 {
     public const string ground = "Ground";
     public const string player = "Player";
+    public const string inventoryItemGrid = "InventoryItemGrid";
+    public const string inventoryItem = "InventoryItem";
 }
